@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(){
+            let n=parseInt(document.getElementById("t1").value);
+            let m=parseInt(document.getElementById("t2").value);
+            document.getElementById("t3").value=n+m;
+        }
+        function sub(){
+            let n=parseInt(document.getElementById("t1").value);
+            let m=parseInt(document.getElementById("t2").value);
+            document.getElementById("t3").value=n-m;
+        }
+        function mul(){
+            let n=parseInt(document.getElementById("t1").value);
+            let m=parseInt(document.getElementById("t2").value);
+            document.getElementById("t3").value=n*m;
+        }
+        function div(){
+            let n=parseInt(document.getElementById("t1").value);
+            let m=parseInt(document.getElementById("t2").value);
+            document.getElementById("t3").value=n/m;
+        }
+    </script>
+</head>
+<body>
+    <input type="number" placeholder="Enter First number" id="t1"><br>
+    <input type="number" placeholder="Enter Second number" id="t2"><br>
+    <input type="number" placeholder="Result" id="t3"><br>
+    <button onclick="add()">Add</button>
+    <button onclick="sub()">Subtract</button>
+    <button onclick="mul()">Multiply</button>
+    <button onclick="div()">divide</button>
+</body>
+</html>

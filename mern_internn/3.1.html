@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0px;
+            padding:0px;
+        }
+
+        ol{
+            list-style-type:none;
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        li,h1
+        {
+            color: white;
+            padding-left: 5px;
+        }
+        li
+        {
+            padding-left: 10px;
+            font-size: 1.2rem;
+        }
+
+        nav
+        {
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: space-between;
+            background-color: black;
+            align-items: center;
+            padding: 10px;
+            color: white;
+        }
+
+        video
+        {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            width:100%;
+            height:100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .text
+        {
+            position:fixed;
+            top: 250px;
+            left: 20px;
+        }
+        p,h3
+        {
+            color: white;
+            width:300px;
+                
+        }
+        button
+        {
+            margin-top:px;
+            padding:10px;
+            border-radius: 10px;
+            transition:  all 0.3s;
+        }
+        button:hover
+        {
+            letter-spacing: 4px;
+            background-color: white;
+            color: black;
+        }
+        img
+        {
+            height: 30px;
+            width: 30px;
+            padding-left: 5px;
+            border-radius: 50%;
+        }
+        footer{
+            position: fixed;
+            left: 20px;
+            bottom: 10px;
+        }
+        li:hover
+        {
+            transform: translate(-5px);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Travel</h1>
+        <ol>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+            <li>Gallery</li>
+        </ol>
+    </nav>
+    <main>
+       <video src="animation.mp4" controls autoplay loop></video>
+    </main>
+    <div class="text">
+        <h3>Never Stop</h3>
+        <h1>EXPLORING THE WORLD</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum impedit, consequatur quas ut dolorem vitae quis sed eius! Quidem incidunt laborum ipsa alias, id enim cupiditate ullam sapiente. Dolore, minus!
+
+        </p>
+        <button>Explore</button>
+
+    </div>
+    <footer>
+        <ol>
+            <li><img src="whatsapp logo.jpg"alt=""></li>
+            <li><img src="instagram logo.jpg"alt=""></li>
+            <li><img src="facebook logo.jpg"alt=""></li>
+        </ol>
+    </footer>
+</html>
