@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item List</title>
+
+    <script>
+        let count = 1;
+
+        function addItem() {
+            let input = document.getElementById("itemInput");
+            let value = input.value;
+
+            if(value.trim() === "") return;
+
+            let list = document.getElementById("list");
+
+            let li = document.createElement("p");
+            li.innerHTML = count + ". " + value;
+
+            list.appendChild(li);
+
+            count++;
+            input.value = ""; 
+        }
+    </script>
+
+</head> 
+<body>
+
+    <input type="text" id="itemInput" placeholder="Enter Item">
+    <button onclick="addItem()">Add</button>
+
+    <div id="list"></div>
+
+</body>
+</html>
