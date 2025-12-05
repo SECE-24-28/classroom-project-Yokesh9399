@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="loadusers()">Load Users</button>
+    <br>
+    <br>
+    <input type="text" placeholder="Search" id="t1" onkeyup="searchusers()">
+    <br>
+    <p id="pa"></p>
+    <script>
+        let alluser=[]
+        function loadusers() {
+            let para = document.getElementById("pa");
+
+            fetch("https://jsonplaceholder.typicode.com/users")
+                .then(res => res.json())
+                .then(data => {
+                        alluser=data
+                        displays(alluser)
+                    });
+        }
+        function displays(users){
+            let para = document.getElementById("pa")
+            let out=""
+            users.forEach(user => {
+                out += <b>${user.id} <br> ${user.name}</b> <br> ${user.email} <br><br>
+            })
+            para.innerHTML=out
+        }
+        function searchusers(){
+            let text = document.getElementById("t1").value.toLowerCase();
+
+            let filtered = alluser.filter(user =>
+                user.name.toLowerCase().includes(text) ||
+                user.email.toLowerCase().includes(text) ||
+                String(user.id).includes(text)
+            )
+            displays(filtered);
+        }
+    </script>
+</body>
+</html>
