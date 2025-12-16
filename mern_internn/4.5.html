@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function press(){
+            let body = document.getElementById("main");
+            let hd = document.createElement("h1");
+            hd.innerHTML = "I am Yokzhhh";
+            body.appendChild(hd);
+            hd.style.backgroundColor = "black";
+            hd.style.color = "white";
+        }
+
+        function change(){
+            let a = document.getElementById("one");
+            a.innerHTML = "Yokzhhh";  // your name only
+        }
+
+        function removeHeading(){
+            let body = document.getElementById("main");
+            let had = document.getElementById("had");
+            body.removeChild(had);
+        }
+    </script>
+</head>
+
+<body id="main">
+
+     <button onclick="press()">Click me</button>
+
+     <h1 id="one">Yokzhhh</h1>
+     <button onclick="change()">Change</button>
+
+     <h1 id="had">Yokzhhh</h1>
+     <button onclick="removeHeading()">Remove</button>
+
+</body>
+</html>

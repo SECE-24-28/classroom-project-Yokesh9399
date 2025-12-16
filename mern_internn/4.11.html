@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple To-Do App</title>
+</head>
+
+<body>
+
+  <h2>Simple To-Do App</h2>
+
+  <input id="taskInput" type="text" placeholder="Enter task">
+  <button id="addBtn">Add</button>
+
+  <ul id="taskList"></ul>
+
+  <script>
+    
+    const input = document.getElementById("taskInput");
+    const addBtn = document.getElementById("addBtn");
+    const list = document.getElementById("taskList");
+
+    addBtn.addEventListener("click",addTask);
+
+    function addTask() {
+      const text = input.value;
+      if (text === "") return;
+
+      const li = document.createElement("li");
+      li.textContent = text;
+
+      // Mark as done on click
+      li.addEventListener("click", function () {
+        if (li.style.textDecoration === "line-through") {
+          li.style.textDecoration = "none";
+        } else {
+          li.style.textDecoration = "line-through";
+        }
+      });
+
+      // Delete button
+      const del = document.createElement("button");
+      del.textContent = "Delete";
+      
+      del.addEventListener("click", function () {
+        li.remove();
+      });
+
+      li.appendChild(del);
+      list.appendChild(li);
+
+      input.value = "";
+    }
+  </script>
+
+</body>
+</html>

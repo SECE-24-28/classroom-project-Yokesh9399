@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>website</title>
+    <style>
+        body{
+            height:200vh;
+        }
+        .outer-container{
+                
+                                
+                                position: relative;
+
+
+                       
+
+            border: 1px solid;
+            width: 60vh;
+            height:90vh;
+            margin:20px auto;
+        }
+        .inner-container{
+
+            border:1px solid;
+            width:60vh;
+            height:90vh;
+            margin:20px auto;
+        }
+        .box{
+            width:100px;
+            height:100px;
+            border:1px solid;
+            font-size: 18px;
+        }
+        .abs{
+            background-color: red;
+            position: absolute;
+            top:0px;
+            left:200px;
+        }
+        .rel{
+            background-color: blue;
+            position: relative;
+            top:10px;
+            left: 100px;
+        }
+        .fix{
+            background-color: green;
+            position: fixed;
+            top:10px;
+            left: 20px;
+        }
+        .sti{
+            background-color: purple;
+            position: sticky;
+            top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-container">
+        <div class="inner-container">
+            <div class="box abs">absolute</div>
+            <div class="box fix">fixed</div>
+            <div class="box rel">relative</div>
+            <div class="box sti">sticky</div>
+        </div>
+    </div>
+</body>
+</html>

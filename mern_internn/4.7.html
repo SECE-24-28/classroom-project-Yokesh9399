@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <p id="error" style="color:red;"></p>
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username"><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <input type="submit" value="Submit" id="sub">
+    </form>
+
+     <script>    
+        let er = document.getElementById("error");
+        let us = document.getElementById("username");
+        let mail = document.getElementById("email");
+        let sub = document.getElementById("sub");
+
+        sub.addEventListener("click", (e) => {
+           e.preventDefault();
+
+           if(us.value == "" || mail.value == "")
+               er.innerHTML = "All fields are required";
+           else {
+               alert("Form submitted successfully");
+               us.value = "";
+               mail.value = "";
+               er.innerHTML = "";
+           }    
+        });
+     </script>
+</body>
+</html>

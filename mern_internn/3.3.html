@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function demo()
+        {
+            let a=parseInt(document.getElementById("t1").value);
+            let b=parseInt(docment.getElementById("t2").value);
+            // let x=parseInt(a);
+            // let y=parseInt(b);
+            let c=a+b;
+            document.getElementById("t3").value=c;
+            // alert("Hello "+na);
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter First Name" id="t1">
+    <input type="text" placeholder="Enter Second Name" id="t2">
+    <input type="text" placeholder="Answer" id="t3">
+    <button onclick="demo()">Click me!</button>
+
+</body>
+</html>

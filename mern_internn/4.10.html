@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Color Mode</title>
+</head>
+<body id="bg" style="text-align:left; padding:40px;">
+    <h1 id="text">Light Mode</h1>
+    <button onclick="changeMode()">Switch Mode</button>
+    <script>
+        function changeMode() {
+            let bg = document.getElementById("bg");
+            let text = document.getElementById("text");
+
+            if (bg.style.backgroundColor === "black") {
+                bg.style.backgroundColor = "white";
+                bg.style.color = "black";
+                text.innerHTML = "Light Mode";
+            } 
+            else {                            h
+                bg.style.backgroundColor = "black";
+                bg.style.color = "white";
+                text.innerHTML = "Dark Mode";
+            }
+        }
+    </script>
+</body>
+</html>
